@@ -21,5 +21,5 @@ public class CheckArrayIsSorted {
             return false;
         }
         return isSorted(arr, i+1);
-    }
+    }   
 }
