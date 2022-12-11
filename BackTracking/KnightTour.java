@@ -9,7 +9,7 @@ public class KnightTour {
     public static void knightTour(int [][] board,int step,int row,int col) {
         // Base Condition
         if(step==(board.length*board.length)){
-            RatInMaze.printMaze(board);
+            printMaze(board);
             return;
         }
         if(col>=board.length ||row>=board.length||col<0 || row<0||board[row][col]!=0){
@@ -33,7 +33,7 @@ public class KnightTour {
     }
     public static boolean oneSolKnightTour(int [][] board,int step,int row,int col) {
         if(step==(board.length*board.length)){
-            RatInMaze.printMaze(board);
+            printMaze(board);
             return true;
         }
         if(col>=board.length ||row>=board.length||col<0 || row<0||board[row][col]!=0){
@@ -63,7 +63,7 @@ public class KnightTour {
     }
     public static int countKnightTourWays(int [][] board,int step,int row,int col) {
         if(step==(board.length*board.length)){
-            // Maze.printMaze(board);
+            // printMaze(board);
             return 1;
         }
         if(col>=board.length ||row>=board.length||col<0 || row<0||board[row][col]!=0){
@@ -87,5 +87,14 @@ public class KnightTour {
         }
         board[row][col]=0;
         return count;
+    }
+    public static void printMaze(int [][] maze) {
+        System.out.println("-----------Maze-----------");
+        for (int i = 0; i < maze.length; i++) {
+            for (int j = 0; j < maze.length; j++) {
+                System.out.print(maze[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
 }
